@@ -43,6 +43,4 @@ def list_os():
 
     status_code = 206 if len(os) == limit else 200
 
-    result = [{'id': user.id, 'username': user.username, 'email': user.email} for user in os]
-
     return jsonify({'id': os.id, 'proprietary_name': os.proprietary_name, 'number_fone': os.number_fone, 'device': os.device, 'problem': os.problem}), status_code
